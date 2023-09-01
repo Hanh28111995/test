@@ -1,3 +1,4 @@
+"use client";
 // import '@/styles/globals.css'
 import '../../public/assets/css/style.min.css'
 import '../../public/assets/css/bootstrap.min.css'
@@ -11,8 +12,7 @@ import Script from 'next/script'
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />      
+      <Component {...pageProps} />
     </>
-
   )
 }

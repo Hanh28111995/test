@@ -1,3 +1,4 @@
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
@@ -5,31 +6,28 @@ import styles from '@/styles/Home.module.css'
 import Script from 'next/script'
 import { useEffect, useState } from 'react'
 import $ from 'jquery'
-// const inter = Inter({ subsets: ['latin'] })
+import dynamic from 'next/dynamic.js'
+import { useRouter } from 'next/router'
+import Child from '@/components/ClientOnly.jsx'
+import ClientOnly from '@/components/ClientOnly.jsx'
 
 export default function Home() {
-  // useEffect(() => {
-  //   import('../../public/assets/js/plugins/plugins.js')
-  //   import('../../public/assets/js/plugins/plugin-custom.js')
-  //   import('../../public/assets/js/main.js')
-  //   import('../../public/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js/index.js')
-  // }, [])
+  useEffect(() => {
+    import('../../public/assets/js/plugins/plugin-custom');
+    import('../../public/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js');
+  }, [])
 
   return (
-
     <>
       < Head >
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
         <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon" />
         <link rel="stylesheet" href="assets/css/style.min.css" />
         <title>xxxxx</title>
-        <Script src='../../public/assets/js/plugins/plugins.js' />
-        <Script src='../../public/assets/js/plugins/plugin-custom.js' />
-        <Script src='../../public/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js/index.js' />
-        <Script src='../../public/assets/js/main.js' />
+        <script type="text/javascript" src='../assets/js/plugins/plugins.js' async></script>
+        <script type="text/javascript" src='../assets/js/main.js' async ></script>
       </Head >
 
-      {/* <!-- start preloader --> */}
       < div >
         <button className="scrollToTop d-none d-md-flex d-center" aria-label="scroll Bar Button">Back To Top</button>
         {/* Scroll To Top End */}
@@ -407,8 +405,8 @@ export default function Home() {
             </div>
             <div className="ellipse-area ellipse-three position-absolute">
               <img src="assets/images/abs-items/ellipse-6.png" className="ellipse-1" alt="icon" />
-            </div> */{'}'}
-            {'{'}/* <div className="ellipse-area ellipse-four position-absolute">
+            </div>
+            <div className="ellipse-area ellipse-four position-absolute">
             </div></div>
 
           <img src="assets/images/abs-items/ellipse-6.png" className="ellipse-1" alt="icon" />

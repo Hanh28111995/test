@@ -1,9 +1,10 @@
-"use strict";
-document.addEventListener("DOMContentLoaded", function () {
+// "use strict";
+// document.addEventListener("DOMContentLoaded", function () {
   
-  $(function ($) {
+//   $(function ($) {
 
     /* niceSelect */
+
     if(document.querySelector('select')){
       $("select").niceSelect();
     }
@@ -739,6 +740,6 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Wow js */
     new WOW().init();
 
-  });
+//   });
   
-});
+// });
