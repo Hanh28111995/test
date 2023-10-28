@@ -8,8 +8,6 @@ import { useEffect, useState } from 'react'
 import $ from 'jquery'
 import dynamic from 'next/dynamic.js'
 import { useRouter } from 'next/router'
-import Child from '@/components/ClientOnly.jsx'
-import ClientOnly from '@/components/ClientOnly.jsx'
 
 export default function Home() {
   useEffect(() => {
@@ -23,74 +21,19 @@ export default function Home() {
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
         <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon" />
         <link rel="stylesheet" href="assets/css/style.min.css" />
-        <title>xxxxx</title>
+        <title>Home</title>
         <script type="text/javascript" src='../assets/js/plugins/plugins.js' async></script>
         <script type="text/javascript" src='../assets/js/main.js' async ></script>
       </Head >
 
-      < div >
+      < div > 
         <button className="scrollToTop d-none d-md-flex d-center" aria-label="scroll Bar Button">Back To Top</button>
-        {/* Scroll To Top End */}
-        {/* Start Custom Cursor */}
+      
         <div className="mouse-follower">
           <span className="cursor-outline" />
           <span className="cursor-dot" />
         </div>
-        {/* End Custom Cursor */}
-        {/* header-section start */}
-        <header className="header-section header-menu">
-          <nav className="navbar w-100 flex-nowrap px-2 py-6 ps-2 ps-xl-10 ps-xxl-10 navbar-expand-xl">
-            <div className="sidebar-close mobile-menu">
-              <button className="d-center d-grid d-xl-none">
-                <i className="material-symbols-outlined mat-icon fs-four"> menu_open </i>
-                <span className="fs-six">MENU</span>
-              </button>
-            </div>
-            <a href="index.html" className="navbar-brand ms-4 ms-xxl-15 d-flex align-items-center gap-2">
-              <img src="assets/images/fav.png" className="logo" alt="logo" />
-              <img src="assets/images/logo-text.png" className="logo-text d-xxl-block d-none" alt="logo-text" />
-            </a>
-            <div className="collapse navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2" id="navbar-content">
-              <ul className="navbar-nav d-xl-flex d-none gap-3 py-4 py-lg-0 ml-auto pe-20 align-self-center">
-                <li>
-                  <a className="dropdown-nav" href="index.html">Home</a>
-                </li>
-                <li>
-                  <a className="dropdown-nav" href="our-services-1.html">Services</a>
-                </li>
-                <li>
-                  <a className="dropdown-nav" href="about-us.html">About</a>
-                </li>
-                <li className="dropdown show-dropdown">
-                  <button type="button" aria-label="Navbar Dropdown Button" className="dropdown-toggle dropdown-nav">Pages</button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="pricing-plan.html">pricing plan</a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="privacy-policy.html">privacy policy</a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="terms-conditions.html">terms conditions</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a className="dropdown-nav" href="blog.html">Blog</a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="contact.html">Contact</a>
-                </li>
-              </ul>
-              <div className="contact-info ms-xl-0 ms-xxl-5 d-none d-sm-flex align-items-center gap-2">
-                <i className="material-symbols-outlined mat-icon"> smartphone </i>
-                <span>(302) 555-0107</span>
-              </div>
-            </div>
-          </nav>
-        </header>
-        {/* header-section end */}
-        {/* Login Registration start */}
+      
         <div className="log-reg cmn-popup">
           <div className="container">
             <div className="row">
@@ -240,8 +183,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Login Registration end */}
-        {/* Sidebar Menu start */}
+        
         <div className="sidebar-wrapper">
           <div className="position-relative">
             <div className="side-menubar py-6 d-flex flex-column justify-content-between align-items-center">
@@ -382,8 +324,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Sidebar Menu end */}
-        {/* Banner-section start */}
+        
         <section className="banner-section index-one overflow-hidden">
           <div>
             <div className="shape-area">
@@ -442,8 +383,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Banner-section end */}
-        {/* About block section start */}
+        
         <section className="about-block pt-120 pb-120">
           <div className="container">
             <div className="row justify-content-between align-items-center">
@@ -527,8 +467,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* About block section end */}
-        {/* Our Games section start */}
+        
         <section className="our-games overflow-hidden pt-120 pb-120">
           <div className="container singletab">
             <div className="row justify-content-center">
@@ -2294,155 +2233,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Contact Us end */}
-        {/* Footer Area Start */}
-        <footer className="footer-section">
-          <div className="container-fluid">
-            <div className="social-items">
-              <ul className="d-flex justify-content-around">
-                <li className="box-style box-second justify-content-center">
-                  <a href="https://www.facebook.com/" className="d-center gap-2">
-                    <i className="fab fa-facebook-f" />
-                    <span>Facebook</span>
-                  </a>
-                </li>
-                <li className="box-style box-second justify-content-center">
-                  <a href="https://www.instagram.com/" className="d-center gap-2">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
-                  </a>
-                </li>
-                <li className="box-style box-second justify-content-center">
-                  <a href="https://www.linkedin.com/" className="d-center gap-2">
-                    <i className="fab fa-linkedin-in" />
-                    <span>linkedin</span>
-                  </a>
-                </li>
-                <li className="box-style box-second justify-content-center">
-                  <a href="https://twitter.com/" className="d-center gap-2">
-                    <i className="fab fa-twitter" />
-                    <span>Twitter</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="row align-items-center justify-content-center overflow-hidden">
-              <div className="col-lg-6 position-relative">
-                <div className="box-items d-inline-flex flex-wrap position-absolute">
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item active-item opacity-25" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item active-item opacity-25" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item active-item opacity-25" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                  <div className="single-item" />
-                </div>
-                <div className="row pt-120 pb-120 px-5 ps-md-15 ps-lg-0 align-items-center justify-content-start justify-content-lg-end">
-                  <div className="col-xl-8 col-lg-10 col-md-8">
-                    <div className="content-area visible-from-bottom">
-                      <div className="section-area">
-                        <a href="index.html" className="fs-four brand-area">Gamestorm</a>
-                        <p className="mt-4 w-75">Gamestorm is a premier gaming studio creating
-                          innovative and engaging games for players of all ages. Offering a wide
-                          variety of gaming experiences.</p>
-                      </div>
-                      <div className="location-area mt-8 d-grid gap-7">
-                        <div className="d-flex gap-3 align-items-center">
-                          <div className="icon-box d-center">
-                            <i className="material-symbols-outlined mat-icon fs-fure"> location_on
-                            </i>
-                          </div>
-                          <div className="right-item">
-                            <h5>London</h5>
-                            <span>Al. Brucknera Aleksandra 63, Wrocław 51-410</span>
-                          </div>
-                        </div>
-                        <div className="d-flex gap-3 align-items-center">
-                          <div className="icon-box d-center">
-                            <i className="material-symbols-outlined mat-icon fs-fure"> location_on
-                            </i>
-                          </div>
-                          <div className="right-item">
-                            <h5>New York</h5>
-                            <span>7012 Green Lake Ave., Poughkeepsie, NY 12601</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="content-right visible-from-bottom pt-120 pb-120 px-5 ps-md-15 ps-lg-10 px-xxl-20">
-                  <div className="row">
-                    <div className="col-xl-8 col-lg-10 col-md-7">
-                      <div className="main-content">
-                        <div className="head-area">
-                          <h4 className="mb-3">Stay updated with news on all our games</h4>
-                          <p>Want to be the first to know about new releases? Subscribe out
-                            newsletter!</p>
-                        </div>
-                        <form action="#">
-                          <div className="input-area mt-6 p-4 d-grid d-sm-flex align-items-center justify-content-between">
-                            <input type="text" placeholder="Enter Your Email" />
-                            <div className="btn-area mt-6 mt-sm-0">
-                              <button className="box-style text-nowrap btn-box">
-                                Send Massage
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <div className="instagram-post mt-10">
-                          <h5 className="mb-5">Instagram post</h5>
-                          <ul className="d-flex gap-2">
-                            <li>
-                              <a href="index.html"><img src="assets/images/instagram-img-1.png" alt="img" /></a>
-                            </li>
-                            <li>
-                              <a href="index.html"><img src="assets/images/instagram-img-2.png" alt="img" /></a>
-                            </li>
-                            <li>
-                              <a href="index.html"><img src="assets/images/instagram-img-3.png" alt="img" /></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom py-8">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-md-6 text-center">
-                    <div className="copyright">
-                      <p>Copyright © 2023 <a href="index.html">Gamestorm</a> - All Right Reserved</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+         
       </div >
+      
     </>
   )
 }
