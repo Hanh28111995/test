@@ -1,9 +1,9 @@
 
 import Head from 'next/head'
+import Script from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Script from 'next/script'
 import { useEffect, useState } from 'react'
 import $ from 'jquery'
 import dynamic from 'next/dynamic.js'
@@ -11,29 +11,25 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
   useEffect(() => {
-    import('../../public/assets/js/plugins/plugin-custom');
+    import('../../public/assets/js/main.js');
+    import('../../public/assets/js/plugins/plugins.js');
+    import('../../public/assets/js/plugins/plugin-custom.js');
     import('../../public/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js');
   }, [])
 
   return (
     <>
       < Head >
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-        <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon" />
-        <link rel="stylesheet" href="assets/css/style.min.css" />
         <title>Home</title>
-        <script type="text/javascript" src='../assets/js/plugins/plugins.js' async></script>
-        <script type="text/javascript" src='../assets/js/main.js' async ></script>
       </Head >
 
-      < div > 
-        <button className="scrollToTop d-none d-md-flex d-center" aria-label="scroll Bar Button">Back To Top</button>
-      
+      < div >
+
         <div className="mouse-follower">
           <span className="cursor-outline" />
           <span className="cursor-dot" />
         </div>
-      
+
         <div className="log-reg cmn-popup">
           <div className="container">
             <div className="row">
@@ -183,7 +179,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         <div className="sidebar-wrapper">
           <div className="position-relative">
             <div className="side-menubar py-6 d-flex flex-column justify-content-between align-items-center">
@@ -324,7 +320,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         <section className="banner-section index-one overflow-hidden">
           <div>
             <div className="shape-area">
@@ -383,7 +379,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
         <section className="about-block pt-120 pb-120">
           <div className="container">
             <div className="row justify-content-between align-items-center">
@@ -467,7 +463,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
         <section className="our-games overflow-hidden pt-120 pb-120">
           <div className="container singletab">
             <div className="row justify-content-center">
@@ -2233,9 +2229,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-         
+
       </div >
-      
+      {/* <Script src={'../assets/js/main.js'} />
+      <Script src={'../assets/js/plugins/plugins.js'} />
+      <Script src={'../assets/js/plugins/plugin-custom.js'} />
+      <Script src={'../assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js'} /> */}
     </>
   )
 }

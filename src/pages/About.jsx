@@ -1,7 +1,7 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+
 import styles from '@/styles/Home.module.css'
 import Script from 'next/script'
 import { useEffect, useState } from 'react'
@@ -10,21 +10,12 @@ import dynamic from 'next/dynamic.js'
 import { useRouter } from 'next/router'
 
 export default function Services() {
-    useEffect(() => {
-        console.log('loading js')
-        import('../../public/assets/js/plugins/plugin-custom');
-        import('../../public/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js');
-    }, [])
+
 
     return (
         <>
             < Head >
-                <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-                <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon" />
-                <link rel="stylesheet" href="assets/css/style.min.css" />
                 <title>About Us</title>
-                <script type="text/javascript" src='../assets/js/plugins/plugins.js' async></script>
-                <script type="text/javascript" src='../assets/js/main.js' async ></script>
             </Head >
 
             <div>
@@ -1229,7 +1220,7 @@ export default function Services() {
                         </div>
                     </div>
                 </section>
-            </div>
+            </div>           
         </>
     )
 }

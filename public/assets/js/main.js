@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+
     // Header Active
     $('.single-item .cmn-head').on('click', function () {
       $(this).parents('.single-item').toggleClass('active');
@@ -253,15 +254,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var curUrl = $(location).attr('href');
     var terSegments = curUrl.split("/");
     var desired_segment = terSegments[terSegments.length - 1];
-    var checkLink = $('.navbar-nav a[href="' + desired_segment + '"]');
-    var targetClass = checkLink.addClass('active');
-    targetClass.parents(".sub-dropdown").find("button").first().addClass('active');
-    targetClass.parents(".show-dropdown").find("button").first().addClass('active');
+    var checkLink = $('.navbar-nav a[href="' + '/'+ desired_segment + '"]');
+    // var targetClass = checkLink.addClass('active');
+    // targetClass.parents(".sub-dropdown").find("button").first().addClass('active');
+    // targetClass.parents(".show-dropdown").find("button").first().addClass('active');
 
     var checkLink = $('.sidebar-content .navbar-nav a[href="' + desired_segment + '"]');
     var targetClass = checkLink.addClass('active');
     targetClass.parents(".sub-dropdown").find("button").first().addClass('active');
     targetClass.parents(".show-dropdown").find("button").first().addClass('active');
+
 
     // Input Increase
     var minVal = 1, maxVal = 20;
