@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import Script from 'next/head'
+
 import Image from 'next/image'
 
 import introduce_bg_img from './../../public/assets/image/bg_img/Group30.png'
@@ -29,14 +29,18 @@ import doitac10 from './../../public/assets/image/product_img/image 31.png'
 import lienhe_poster from './../../public/assets/image/product_img/Nuoc Mam Ca Com My Poster 082026.png'
 import footer_bg_img from './../../public/assets/image/bg_img/footer_bg_top.png'
 import Flat from './../../public/assets/image/product_img/Flat-03 1.png'
+import { useEffect } from 'react'
+import Script from 'next/script'
 
 
 export default function Home() {
+
   return (
     <>
       < Head >
         <title>SON FOODS - Home</title>
       </Head >
+
       <div>
         <section className="introduce-part">
           <Image src={introduce_bg_img} alt="" />
@@ -120,7 +124,7 @@ export default function Home() {
                     <div className="item-overlay">
                       <Image src={product_1} alt="" />
                     </div>
-                    <Image src={product_2} className="card-img-top" alt="Card image cap" />
+                    <Image src={product_2} className="card-img-top img-fluid" alt="Card image cap" />
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">Nước Mắm Cá Cơm Mỹ</h5>
@@ -139,8 +143,8 @@ export default function Home() {
                       <Image src={product_1} alt="" />
                     </div>
                     <div className="product-image">
-                      <Image className="card-img-top" src={product_3} alt="Card image cap" />
-                      <Image className="card-img-top" src={product_3} alt="Card image cap" />
+                      <Image className="card-img-top img-fluid" src={product_3} alt="Card image cap" />
+                      <Image className="card-img-top img-fluid" src={product_3} alt="Card image cap" />
                     </div>
                   </div>
                   <div className="card-body">
@@ -159,7 +163,7 @@ export default function Home() {
                     <div className="item-overlay">
                       <Image src={product_1} alt="" />
                     </div>
-                    <Image className="card-img-top" src={product_4} alt="Card image cap" />
+                    <Image className="card-img-top img-fluid" src={product_4} alt="Card image cap" />
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">Nước Mắm Cá Cơm Mỹ</h5>
@@ -301,7 +305,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <Script type="text/javascript" src="../../public/assets/js/index.js"></Script>
+
     </>
   )
 }

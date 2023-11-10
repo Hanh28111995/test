@@ -1,11 +1,3 @@
-$(function ($) {
-  let url = window.location.href;
-  $('li a').each(function () {
-    if (this.href === url) {
-      $(this).closest('li').addClass('active');
-    }
-  });
-});
 $(document).ready(function () {
   $('.news-list .fix-padding-col:lt(3)').show();
   var items = 6;
@@ -39,6 +31,10 @@ $(document).ready(function () {
     }
   );
 })
+
+
+
+
 
 
 
