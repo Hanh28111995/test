@@ -4,7 +4,7 @@ import fb_logo from './../../public/assets/image/icon_img/social-icon/facebook.p
 import ins_logo from './../../public/assets/image/icon_img/social-icon/instagram.png'
 
 export default function Footer() {
-    return (        
+    return (
         <footer>
             <div className="footer-content container">
                 <div className="footer-item1">
@@ -84,6 +84,5 @@ export default function Footer() {
                 <p>© Son Foods Inc</p>
             </div>
         </footer>
-
     )
 }

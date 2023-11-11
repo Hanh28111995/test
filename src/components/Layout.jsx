@@ -8,7 +8,7 @@ import Script from 'next/head';
 export default function Layout({ children }) {
 
     return (
-        <div className='content'>
+        <div className='content' style={{ zIndex: 0, position: 'relative' }}>
 
             <Navbar />
 

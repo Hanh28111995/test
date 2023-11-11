@@ -29,18 +29,37 @@ import doitac10 from './../../public/assets/image/product_img/image 31.png'
 import lienhe_poster from './../../public/assets/image/product_img/Nuoc Mam Ca Com My Poster 082026.png'
 import footer_bg_img from './../../public/assets/image/bg_img/footer_bg_top.png'
 import Flat from './../../public/assets/image/product_img/Flat-03 1.png'
+
+import 'mediabox/dist/mediabox.min.css';
+import mediabox from 'mediabox';
+
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick'
 import { useEffect } from 'react'
-import Script from 'next/script'
 
 
 export default function Home() {
+  useEffect(() => {
+    mediabox('.mediabox'); 
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
   return (
     <>
       < Head >
         <title>SON FOODS - Home</title>
       </Head >
-
       <div>
         <section className="introduce-part">
           <Image src={introduce_bg_img} alt="" />
@@ -184,7 +203,7 @@ export default function Home() {
           </div>
           <div className="media-content">
             <div className="video-zone container">
-              <a href="https://www.youtube.com/embed/QpQdbCQx49w?si=Ba3cTMUMM_NoyTV8" className="mediabox" rel="nofollow">
+              <a href="https://www.youtube.com/embed/QpQdbCQx49w?si=Ba3cTMUMM_NoyTV8" className="mediabox" data-mediabox="video">
                 <Image className="video-icon" src={video_icon} alt="" />
                 <Image className="video-bg desktop is-paused w-100" src={video_thumbnail} alt="" />
               </a>
@@ -224,7 +243,7 @@ export default function Home() {
           <div className="main_title">
             <h3 className="color-1">ĐỐI TÁC</h3>
           </div>
-          <div className="client_slides">
+          <Slider {...settings}>
             <div className="cover_img">
               <Image src={doitac1} alt="" />
             </div>
@@ -255,7 +274,7 @@ export default function Home() {
             <div className="cover_img">
               <Image src={doitac10} alt="" />
             </div>
-          </div>
+          </Slider>
         </section>
         <section className="contact-part" style={{ zIndex: 0, position: 'relative' }}>
           <div className="contact-content">
@@ -305,6 +324,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+
 
     </>
   )

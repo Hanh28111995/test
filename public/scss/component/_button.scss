@@ -3,7 +3,7 @@
 .btn_header-2,
 .btn_header-3 {
     background-color: transparent;
-    background-image: url('../../asset/image/product_bg_img/button_bg.png');
+    background-image: url('../../assets/image/product_bg_img/button_bg.png');
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -36,7 +36,7 @@
 
     &::after {
         content: '';
-        background-image: url('../../asset/image/product_bg_img/button_bg_shadow.png');
+        background-image: url('../../assets/image/product_bg_img/button_bg_shadow.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -59,7 +59,7 @@
     margin-top: 1.5rem;
 
     &::after {
-        background-image: url('../../asset/image/product_bg_img/button_bg_shadow_light.png');
+        background-image: url('../../assets/image/product_bg_img/button_bg_shadow_light.png');
     }
 }
 
@@ -71,7 +71,7 @@
     font-size: 22px;
     width: 250px;
     height: 80px;
-    background-image: url('../../asset/image/product_bg_img/Vector\ \(1\).png');
+    background-image: url('../../assets/image/product_bg_img/Vector\ \(1\).png');
 
     &::after {
         content: '';
@@ -80,7 +80,7 @@
         height: 100%;
         justify-content: center;
         align-items: center;
-        background-image: url('../../asset/image/product_bg_img/button_bg_shadow_light.png');
+        background-image: url('../../assets/image/product_bg_img/button_bg_shadow_light.png');
     }
 }
 
