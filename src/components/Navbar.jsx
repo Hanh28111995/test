@@ -7,6 +7,7 @@ import logo from './../../public/assets/image/icon_img/Son logo-02 1.png'
 import Image from 'next/image'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 
 
 function Navbar() {
@@ -45,7 +46,7 @@ function Navbar() {
         <link rel="stylesheet" href="./assets/css/main.css" />
       </Head>
       <header className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <Image className="img-fluid logo_img" src={logo} alt="" />
         </a>
         <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -78,6 +79,14 @@ function Navbar() {
           </button>
         </div>
       </header>
+      <script id="jquery1" type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js" />
+      <script id="popper" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous" />
+      <script id="bs4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous" />
+      <script id="main_js" type="text/javascript" src="./assets/js/index.js" />
     </>
   )
 }

@@ -584,6 +584,7 @@ body .contact-page .contact-page-carousel {
 }
 body .contact-page .contact-page-carousel .carousel-img {
   width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1223,6 +1224,12 @@ body .aboutUs-part .container-fluid::before {
 }
 body .aboutUs-part .carousel-img {
   margin-bottom: 3rem;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body .aboutUs-part .carousel-decor-img {
   position: absolute;

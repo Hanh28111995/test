@@ -45,6 +45,8 @@ export default function Home() {
     mediabox('.mediabox'); 
   }, []);
 
+ 
+
   const settings = {
     dots: true,
     infinite: true,
@@ -58,7 +60,7 @@ export default function Home() {
   return (
     <>
       < Head >
-        <title>SON FOODS - Home</title>
+        <title>SON FOODS - Trang chủ</title>
       </Head >
       <div>
         <section className="introduce-part">

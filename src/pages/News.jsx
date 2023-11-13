@@ -11,8 +11,24 @@ import { useEffect } from 'react'
 import contact_bg_1 from "./../../public/assets/image/bg_img/news_bg1.png"
 import contact_bg_2 from "./../../public/assets/image/bg_img/news_bg2.png"
 import contact_bg_3 from "./../../public/assets/image/bg_img/news_bg3.png"
+import Script from 'next/script';
+import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 export default function News() {
+    // useEffect(() => {
+
+    //     const script = document.createElement('script');
+    //     script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+    //     script.async = true;
+    //     script.onload = () => {
+    //         // Load your-script.js after jQuery has loaded
+    //         const yourScript = document.createElement('script');
+    //         yourScript.src = './assets/js/index.js';
+    //         document.body.appendChild(yourScript);
+    //     };
+    //     document.body.appendChild(script);
+    // }, []); // The empty dependency array ensures the effect runs only once on mount
 
     const settings = {
         dots: false,
@@ -26,6 +42,10 @@ export default function News() {
 
     return (
         <>
+            < Head >
+                <title>SON FOODS - Truyền thông</title>
+            </Head >
+
             <section className="contact-page">
                 <Slider className="contact-page-carousel" {...settings}>
                     <div>
@@ -185,7 +205,7 @@ export default function News() {
                         </button>
                     </div>
                 </div>
-                {/* <div className="orther-new mt-5">
+                <div className="orther-new mt-5">
                     <div className="main_title py-3">
                         <h3 className="color-2">INSTAGRAM</h3>
                     </div>
@@ -197,7 +217,7 @@ export default function News() {
                                     <div className="post_name">
                                         <p className="name">Son Fishsauce
                                             <span>
-                                                <img src="./asset/image/icon_img/Tick.png" alt="instagram SonFood" />
+                                                <img src="./assets/image/icon_img/Tick.png" alt="instagram SonFood" />
                                             </span>
                                         </p>
                                         <p className="address">Phu Quoc</p>
@@ -208,7 +228,7 @@ export default function News() {
                                 </div>
                                 <div className="post_item_content">
                                     <a target="_blank" href="https://www.instagram.com/p/CuUppGQR8eC/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                                        <img src="./asset/image/instagram_post/post2.jpg" alt />
+                                        <img src="./assets/image/instagram_post/post2.jpg" alt />
                                     </a>
                                 </div>
                             </div>
@@ -220,7 +240,7 @@ export default function News() {
                                     <div className="post_name">
                                         <p className="name">Son Fishsauce
                                             <span>
-                                                <img src="./asset/image/icon_img/Tick.png" alt="instagram SonFood" />
+                                                <img src="./assets/image/icon_img/Tick.png" alt="instagram SonFood" />
                                             </span>
                                         </p>
                                         <p className="address">Phu Quoc</p>
@@ -231,7 +251,7 @@ export default function News() {
                                 </div>
                                 <div className="post_item_content">
                                     <a target="_blank" href="https://www.instagram.com/p/Ct9eoxSxUUQ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                                        <img src="./asset/image/instagram_post/post3.jpg" alt />
+                                        <img src="./assets/image/instagram_post/post3.jpg" alt />
                                     </a>
                                 </div>
                             </div>
@@ -243,7 +263,7 @@ export default function News() {
                                     <div className="post_name">
                                         <p className="name">Son Fishsauce
                                             <span>
-                                                <img src="./asset/image/icon_img/Tick.png" alt="instagram SonFood" />
+                                                <img src="./assets/image/icon_img/Tick.png" alt="instagram SonFood" />
                                             </span>
                                         </p>
                                         <p className="address">Phu Quoc</p>
@@ -254,14 +274,22 @@ export default function News() {
                                 </div>
                                 <div className="post_item_content">
                                     <a target="_blank" href="https://www.instagram.com/reel/CyEeH8Hvzl-/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                                        <img src="./asset/image/instagram_post/post1.jpg" alt />
+                                        <img src="./assets/image/instagram_post/post1.jpg" alt />
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </section>
+            <script id="jquery1" type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js" />
+            <script id="popper" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous" />
+            <script id="bs4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous" />
+            <script id="main_js" type="text/javascript" src="./assets/js/index.js" />
         </>
     )
 }
