@@ -86,7 +86,7 @@ export default function News() {
                             <div className="news-item-smaller">
                                 <a target="_blank" href="https://www.seriouseats.com/charles-phans-flavored-fish-sauce">
                                     <div className="news-item-smaller-bg">
-                                        <img src="https://www.seriouseats.com/thmb/B8MJr1uobrZpvIgMOu5n91A4Tf4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2013__01__20130129-238406-cook-the-book-green-papaya-salad-ae7d3b43b48d4214ac3cd0fe27da0894.jpg" alt=''
+                                        <Image src="https://www.seriouseats.com/thmb/B8MJr1uobrZpvIgMOu5n91A4Tf4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2013__01__20130129-238406-cook-the-book-green-papaya-salad-ae7d3b43b48d4214ac3cd0fe27da0894.jpg" alt='' className='position-relative' fill
                                         />
                                     </div>
                                     <div className="news-item-content d-flex">
