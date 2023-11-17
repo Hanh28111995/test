@@ -46,9 +46,9 @@ function Navbar() {
         <link rel="stylesheet" href="./assets/css/main.css" />
       </Head>
       <header className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           <Image className="img-fluid logo_img" src={logo} alt="" />
-        </a>
+        </Link>
         <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav m-auto bg-transparent">
