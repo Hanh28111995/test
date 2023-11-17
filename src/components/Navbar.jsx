@@ -85,8 +85,7 @@ function Navbar() {
         crossorigin="anonymous" />
       <script id="bs4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous" />
-      <script id="main_js" type="text/javascript" src="./assets/js/index.js" />
+        crossorigin="anonymous" />  
     </>
   )
 }

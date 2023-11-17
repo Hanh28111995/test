@@ -6,7 +6,7 @@ import Image from 'next/image'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import contact_bg_1 from "./../../public/assets/image/bg_img/news_bg1.png"
 import contact_bg_2 from "./../../public/assets/image/bg_img/news_bg2.png"
@@ -14,21 +14,38 @@ import contact_bg_3 from "./../../public/assets/image/bg_img/news_bg3.png"
 import Script from 'next/script';
 import { useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
+import $ from 'jquery'
+
 
 export default function News() {
-    // useEffect(() => {
 
-    //     const script = document.createElement('script');
-    //     script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-    //     script.async = true;
-    //     script.onload = () => {
-    //         // Load your-script.js after jQuery has loaded
-    //         const yourScript = document.createElement('script');
-    //         yourScript.src = './assets/js/index.js';
-    //         document.body.appendChild(yourScript);
-    //     };
-    //     document.body.appendChild(script);
-    // }, []); // The empty dependency array ensures the effect runs only once on mount
+    useEffect(() => {
+        $("#collap-item").hide();
+        $('.news-list .fix-padding-col:lt(3)').show();
+    },)
+
+    const expandItem = () => {
+        console.log('x')
+        var items = 6;
+        var show = 3;
+        let shown = $('.news-list .fix-padding-col:visible').length;
+        let next_show = shown + show;
+        if (shown < items) {
+            $('.news-list .fix-padding-col:lt(' + next_show + ')').show(300);
+        }
+        next_show = $('.news-list .fix-padding-col:visible').length;
+        if (next_show >= items) {
+            $("#expand-item").hide();
+            $("#collap-item").show();
+        }
+    }
+    const collapseItem = () => {
+        console.log('y')
+        $('.news-list .fix-padding-col:gt(2)').hide(300);
+        $('.news-list .fix-padding-col:lt(3)').show();
+        $("#expand-item").show();
+        $("#collap-item").hide();
+    }
 
     const settings = {
         dots: false,
@@ -200,96 +217,105 @@ export default function News() {
                         </div>
                     </div>
                     <div className="row col-12 justify-content-center">
-                        <button id="expand-item" className="btn_header-1">
+                        <button id="expand-item" className="btn_header-1" onClick={() => expandItem()}>
                             Xem thêm
+                        </button>
+                        <button id="collap-item" className="btn_header-1" onClick={() => collapseItem()}>
+                            Thu gọn
                         </button>
                     </div>
                 </div>
                 <div className="orther-new mt-5">
-                    <div className="main_title py-3">
-                        <h3 className="color-2">INSTAGRAM</h3>
-                    </div>
-                    <div className="instagram_main_content col-12 row">
-                        <div className="col-lg-4 post_wrap mb-5 ">
-                            <div className="post_item">
-                                <div className="post_item_head">
-                                    <img src="https://www.sonfoodsinc.com/wp-content/uploads/2022/08/cropped-favicon-32x32.png" alt />
-                                    <div className="post_name">
-                                        <p className="name">Son Fishsauce
-                                            <span>
-                                                <img src="./assets/image/icon_img/Tick.png" alt="instagram SonFood" />
-                                            </span>
-                                        </p>
-                                        <p className="address">Phu Quoc</p>
-                                    </div>
-                                    <a href="https://www.instagram.com/sonfishsauce/" className="ml-auto insta-profile">
-                                        <button>View profile</button>
+                    <div className="container">
+                        <div className="main_title py-3 ">
+                            <h3 className="color-2">INSTAGRAM</h3>
+                        </div>
+                        <div className="instagram_head_content col-12 row">
+                            <div className="insta-logo col-12 col-sm-4">
+                                <div className="insta-logo-border">
+                                    <img src="./assets/image/icon_img/instagram_avatar.jpg" alt />
+                                </div>
+                            </div>
+                            <div className="insta-infor col-12 col-sm-8">
+                                <div className="user_name">
+                                    <span>sonfishsauce</span>
+                                    <a target="_blank" href="https://www.instagram.com/sonfishsauce/">
+                                        <button type="button" className="btn btn-primary">
+                                            View
+                                        </button>
                                     </a>
                                 </div>
-                                <div className="post_item_content">
+                                <p className="follow d-flex">
+                                    <span>888 &nbsp;posts</span>
+                                    <span>4,562 &nbsp;followers</span>
+                                    <span>1 &nbsp;following</span>
+                                </p>
+                                <p>The Real Deal</p>
+                                <p className="prize" dir="auto" style={{ fontSize: 14, color: 'black' }}>🥇Gold Can Tho 1996<br />🏆Gold
+                                    Vung Tau 2002<br />🏅Gold Hanoi 2004<br />🌎 North America Premium Fish Sauce
+                                    2020<br />🎖Europe Best Traditional Fish Sauce 2021</p>
+                            </div>
+                        </div>
+                        <div className="instagram_main_content col-12 row ">
+                            <div className="col-md-4 post_wrap ">
+                                <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/CuUppGQR8eC/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                                        <img src="./assets/image/instagram_post/post2.jpg" alt />
+                                        <div className="post_item_content">
+                                            <img src="./assets/image/insgram-post/post2.jpg" alt />
+                                        </div>
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-lg-4 post_wrap mb-5">
-                            <div className="post_item">
-                                <div className="post_item_head">
-                                    <img src="https://www.sonfoodsinc.com/wp-content/uploads/2022/08/cropped-favicon-32x32.png" alt />
-                                    <div className="post_name">
-                                        <p className="name">Son Fishsauce
-                                            <span>
-                                                <img src="./assets/image/icon_img/Tick.png" alt="instagram SonFood" />
-                                            </span>
-                                        </p>
-                                        <p className="address">Phu Quoc</p>
+                            <div className="col-md-4 post_wrap ">
+                                <a target="_blank" href="https://www.instagram.com/reel/CyEeH8Hvzl-/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
+                                    <div className="post_item">
+                                        <div className="post_item_content">
+                                            <img src="./assets/image/insgram-post/lobster.jpg" alt />
+                                        </div>
                                     </div>
-                                    <a href="https://www.instagram.com/sonfishsauce/" className="ml-auto insta-profile">
-                                        <button>View profile</button>
+                                </a>
+                            </div>
+                            <div className="col-md-4 post_wrap ">
+                                <div className="post_item">
+                                    <a target="_blank" href="https://www.instagram.com/p/CxPaWT4u2zD/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
+                                        <div className="post_item_content">
+                                            <img src="./assets/image/insgram-post/376247319_18390024877039502_572902003391569228_n.jpg" alt />
+                                        </div>
                                     </a>
                                 </div>
-                                <div className="post_item_content">
+                            </div>
+                            <div className="col-md-4 post_wrap ">
+                                <div className="post_item">
+                                    <a target="_blank" href="https://www.instagram.com/p/CvlZozRp8wi/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
+                                        <div className="post_item_content">
+                                            <img src="./assets/image/insgram-post/363351609_18382145791039502_8438762505152315124_n.jpg" alt />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-md-4 post_wrap ">
+                                <div className="post_item">
+                                    <a target="_blank" href="https://www.instagram.com/p/CybVURcBImv/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
+                                        <div className="post_item_content">
+                                            <img src="./assets/image/insgram-post/393320326_18395628574039502_6540053422781056744_n.jpg" alt />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-md-4 post_wrap">
+                                <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/Ct9eoxSxUUQ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                                        <img src="./assets/image/instagram_post/post3.jpg" alt />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 post_wrap mb-5 ">
-                            <div className="post_item">
-                                <div className="post_item_head">
-                                    <img src="https://www.sonfoodsinc.com/wp-content/uploads/2022/08/cropped-favicon-32x32.png" alt />
-                                    <div className="post_name">
-                                        <p className="name">Son Fishsauce
-                                            <span>
-                                                <img src="./assets/image/icon_img/Tick.png" alt="instagram SonFood" />
-                                            </span>
-                                        </p>
-                                        <p className="address">Phu Quoc</p>
-                                    </div>
-                                    <a href="https://www.instagram.com/sonfishsauce/" className="ml-auto insta-profile">
-                                        <button>View profile</button>
-                                    </a>
-                                </div>
-                                <div className="post_item_content">
-                                    <a target="_blank" href="https://www.instagram.com/reel/CyEeH8Hvzl-/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                                        <img src="./assets/image/instagram_post/post1.jpg" alt />
+                                        <div className="post_item_content">
+                                            <img src="./assets/image/insgram-post/356065191_3457956614520677_5294831407093956875_n.jpg" alt />
+                                        </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <script id="jquery1" type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js" />
-            <script id="popper" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous" />
-            <script id="bs4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous" />
-            <script id="main_js" type="text/javascript" src="./assets/js/index.js" />
+            </section >
+
         </>
     )
 }

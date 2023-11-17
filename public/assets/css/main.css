@@ -427,7 +427,7 @@ body p {
   line-height: auto;
 }
 body .main_title {
-  padding: 100px 0;
+  padding: 110px 0;
   text-align: center;
 }
 body .card {
@@ -584,7 +584,6 @@ body .contact-page .contact-page-carousel {
 }
 body .contact-page .contact-page-carousel .carousel-img {
   width: 100%;
-  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -941,10 +940,9 @@ body .products-part-detail .sliders-wrap {
   position: relative;
 }
 body .products-part-detail .sliders-wrap .cover_img {
-  width: unset !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1029,11 +1027,10 @@ body .media-part .media-content .text-zone {
 body .media-part .media-content .text-zone h4 {
   font-size: 1.2rem;
 }
-body .customer-part .slick-slider .cover_img {
-  width: unset !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+body .customer-part .client_slides .cover_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1047,7 +1044,7 @@ body .customer-part .slick-slider .cover_img {
   background-size: contain;
   position: relative;
 }
-body .customer-part .slick-slider .cover_img img {
+body .customer-part .client_slides .cover_img img {
   mix-blend-mode: darken;
 }
 body .contact-infor-part {
@@ -1224,12 +1221,6 @@ body .aboutUs-part .container-fluid::before {
 }
 body .aboutUs-part .carousel-img {
   margin-bottom: 3rem;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 body .aboutUs-part .carousel-decor-img {
   position: absolute;
@@ -1301,9 +1292,12 @@ body .news-part #expand-item {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-body .news-part #expand-item.disable {
-  cursor: none;
-  pointer-events: none;
+body .news-part .disable {
+  display: none;
+}
+body .news-part #collap-item {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   background-image: url("/../assets/image/product_bg_img/Vector (1).png") !important;
 }
 body .news-part .news-list {
@@ -1447,6 +1441,9 @@ body .news-part .orther-new {
   padding-bottom: 6rem;
   color: #fff;
 }
+body .news-part .orther-new .main_title {
+  padding-bottom: 5rem !important;
+}
 body .news-part .orther-new .orther-news-item .orther-new-wrap {
   border-radius: 37px;
   padding: 15px;
@@ -1460,88 +1457,83 @@ body .news-part .orther-new .orther-news-item:nth-child(2) > .orther-new-wrap {
 body .news-part .orther-new .orther-news-item:nth-child(3) > .orther-new-wrap {
   background-color: #2E3191;
 }
-body .news-part .orther-new .instagram_main_content {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+body .news-part .orther-new .instagram_head_content {
+  color: #2E3191;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px solid rgba(128, 128, 128, 0.2);
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item {
-  padding-top: 10px;
-  background-color: #fff;
-  border-radius: 4px;
-  -webkit-box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
-}
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head {
+body .news-part .orther-new .instagram_head_content .insta-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head > img {
-  width: 32px;
-  margin-left: 15px;
+body .news-part .orther-new .instagram_head_content .insta-logo .insta-logo-border img {
+  border-radius: 50%;
+  border: 3px solid pink;
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head .post_name {
-  margin-left: 15px;
-}
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head .post_name .name {
-  color: #000000;
-  font-family: "Inter";
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 5px;
+body .news-part .orther-new .instagram_head_content .insta-infor p {
   text-align: left;
-  margin: 0;
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head .post_name .name span img {
-  width: 15px;
+body .news-part .orther-new .instagram_head_content .insta-infor .user_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head .post_name .address {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
+body .news-part .orther-new .instagram_head_content .insta-infor .user_name button {
+  margin-left: 3rem;
+  font-size: 0.8rem;
+}
+body .news-part .orther-new .instagram_head_content .insta-infor .follow {
   text-align: left;
-  margin-bottom: 0;
-  color: #000000;
-  margin: 0;
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head button {
-  margin-right: 15px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 6px 11px;
-  border-radius: 3px;
-  background-color: #0095F6;
+body .news-part .orther-new .instagram_head_content .insta-infor .follow span {
+  margin-right: 3rem;
 }
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_head button:hover {
-  background-color: #007ff6;
+body .news-part .orther-new .instagram_main_content {
+  border-top: 2px solid rgba(128, 128, 128, 0.2);
+  padding-top: 3rem;
+}
+body .news-part .orther-new .instagram_main_content .post_wrap {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-bottom: 10px;
+}
+body .news-part .orther-new .instagram_main_content .post_wrap .post_item {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_content {
   width: 100%;
-  height: 500px;
+  height: 450px;
   overflow: hidden;
 }
 body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_content img {
   width: 100%;
-  height: 100%;
-}
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_foot {
-  padding: 15px 0;
-}
-body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_foot a {
-  font-family: "Inter";
-  font-weight: 700;
-  text-align: left;
-  margin-left: 15px;
-  color: #0196F6;
+  height: inherit;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 body .news-part-detail p {
   font-weight: 100;
@@ -2264,6 +2256,27 @@ body .customer-part {
   }
 }
 @media (max-width: 576px) {
+  body footer .footer-content {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    width: 90%;
+  }
+  body .news-part .orther-new .instagram_main_content .post_wrap .post_item .post_item_content {
+    height: 365px;
+  }
+  body .news-part .orther-new {
+    padding: 3rem 0;
+  }
+  body .news-part .orther-new .main_title {
+    padding-bottom: 3rem !important;
+  }
+  body .news-part .orther-new .instagram_head_content .insta-logo {
+    margin-bottom: 25px;
+  }
+  body .news-part .orther-new .instagram_head_content .insta-infor {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   body .news-part #expand-item {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
