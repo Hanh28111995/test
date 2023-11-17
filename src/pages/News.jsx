@@ -109,7 +109,7 @@ export default function News() {
                             <div className="news-item-smaller">
                                 <a target="_blank" href="https://cooking.nytimes.com/recipes/1024023-ph-ga-chicken-pho">
                                     <div className="news-item-smaller-bg">
-                                        <img src="https://static01.nyt.com/images/2023/03/22/multimedia/16korex1-pho-ltgp/16korex1-pho-ltgp-master768.jpg" alt=''
+                                        <Image src="https://static01.nyt.com/images/2023/03/22/multimedia/16korex1-pho-ltgp/16korex1-pho-ltgp-master768.jpg" alt='' className='position-relative' fill
                                         />
                                     </div>
                                     <div className="news-item-content d-flex">
@@ -130,7 +130,7 @@ export default function News() {
                             <div className="news-item-smaller">
                                 <a target="_blank" href="https://cheftu.com/recipelibrary/nuocmamgung">
                                     <div className="news-item-smaller-bg">
-                                        <img src="https://images.squarespace-cdn.com/content/v1/56cf7cfb0442626af6cd8f70/1625072391862-6Y4SZFBW54DZMS4KOPI9/IMG_1575.jpg?format=2500w" alt=''
+                                        <Image src="https://images.squarespace-cdn.com/content/v1/56cf7cfb0442626af6cd8f70/1625072391862-6Y4SZFBW54DZMS4KOPI9/IMG_1575.jpg?format=2500w" alt='' className='position-relative' fill
                                         />
                                     </div>
                                     <div className="news-item-content d-flex">
@@ -152,7 +152,7 @@ export default function News() {
                             <div className="news-item-smaller">
                                 <a target="_blank" href="https://www.makesauerkraut.com/kimchi-series-fish-sauce/">
                                     <div className="news-item-smaller-bg">
-                                        <img src="https://www.makesauerkraut.com/wp-content/uploads/2019/01/kimchi-series-fish-sauce.jpg" alt=''
+                                        <Image src="https://www.makesauerkraut.com/wp-content/uploads/2019/01/kimchi-series-fish-sauce.jpg" alt='' className='position-relative' fill
                                         />
                                     </div>
                                     <div className="news-item-content d-flex">
@@ -174,7 +174,7 @@ export default function News() {
                             <div className="news-item-smaller">
                                 <a target="_blank" href="https://spicetribe.com/blogs/recipes/bun-nem-nuong-vietnamese-sausage-and-rice-noodle">
                                     <div className="news-item-smaller-bg">
-                                        <img src="https://spicetribe.com/cdn/shop/articles/20221104222541-ej39kij_360x.jpg?v=1679358983" alt="Photo of Bún Nem Nướng (Vietnamese Sausage And Rice Noodle)"
+                                        <Image src="https://spicetribe.com/cdn/shop/articles/20221104222541-ej39kij_360x.jpg?v=1679358983" alt="Photo of Bún Nem Nướng (Vietnamese Sausage And Rice Noodle)" className='position-relative' fill
                                         />
                                     </div>
                                     <div className="news-item-content d-flex">
@@ -197,7 +197,7 @@ export default function News() {
                             <div className="news-item-smaller">
                                 <a target="_blank" href="https://www.seasonalcookbook.com/vietnamese-fish-sauce-for-dipping">
                                     <div className="news-item-smaller-bg">
-                                        <img src="https://www.seasonalcookbook.com/wp-content/uploads/2022/07/Vietnamese-Fish-Sauce-in-Bowl.jpg" alt="Vietnamese Fish Sauce for Dipping"
+                                        <Image src="https://www.seasonalcookbook.com/wp-content/uploads/2022/07/Vietnamese-Fish-Sauce-in-Bowl.jpg" alt="Vietnamese Fish Sauce for Dipping" className='position-relative' fill
                                         />
                                     </div>
                                     <div className="news-item-content d-flex">
@@ -233,7 +233,7 @@ export default function News() {
                         <div className="instagram_head_content col-12 row">
                             <div className="insta-logo col-12 col-sm-4">
                                 <div className="insta-logo-border">
-                                    <img src="./assets/image/icon_img/instagram_avatar.jpg" alt />
+                                    <Image src="/assets/image/icon_img/instagram_avatar.jpg" alt="" className='position-relative' fill />
                                 </div>
                             </div>
                             <div className="insta-infor col-12 col-sm-8">
@@ -261,7 +261,7 @@ export default function News() {
                                 <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/CuUppGQR8eC/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                                         <div className="post_item_content">
-                                            <img src="./assets/image/insgram-post/post2.jpg" alt />
+                                            <Image src="/assets/image/insgram-post/post2.jpg" alt="" className='position-relative' fill />
                                         </div>
                                     </a>
                                 </div>
@@ -270,7 +270,7 @@ export default function News() {
                                 <a target="_blank" href="https://www.instagram.com/reel/CyEeH8Hvzl-/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                                     <div className="post_item">
                                         <div className="post_item_content">
-                                            <img src="./assets/image/insgram-post/lobster.jpg" alt />
+                                            <Image src="/assets/image/insgram-post/lobster.jpg" alt="" className='position-relative' fill />
                                         </div>
                                     </div>
                                 </a>
@@ -279,7 +279,7 @@ export default function News() {
                                 <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/CxPaWT4u2zD/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                                         <div className="post_item_content">
-                                            <img src="./assets/image/insgram-post/376247319_18390024877039502_572902003391569228_n.jpg" alt />
+                                            <Image src="/assets/image/insgram-post/376247319_18390024877039502_572902003391569228_n.jpg" alt="" className='position-relative' fill />
                                         </div>
                                     </a>
                                 </div>
@@ -288,7 +288,7 @@ export default function News() {
                                 <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/CvlZozRp8wi/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                                         <div className="post_item_content">
-                                            <img src="./assets/image/insgram-post/363351609_18382145791039502_8438762505152315124_n.jpg" alt />
+                                            <Image src="/assets/image/insgram-post/363351609_18382145791039502_8438762505152315124_n.jpg" alt="" className='position-relative' fill />
                                         </div>
                                     </a>
                                 </div>
@@ -297,7 +297,7 @@ export default function News() {
                                 <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/CybVURcBImv/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                                         <div className="post_item_content">
-                                            <img src="./assets/image/insgram-post/393320326_18395628574039502_6540053422781056744_n.jpg" alt />
+                                            <Image src="/assets/image/insgram-post/393320326_18395628574039502_6540053422781056744_n.jpg" alt='' className='position-relative' fill />
                                         </div>
                                     </a>
                                 </div>
@@ -306,7 +306,7 @@ export default function News() {
                                 <div className="post_item">
                                     <a target="_blank" href="https://www.instagram.com/p/Ct9eoxSxUUQ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                                         <div className="post_item_content">
-                                            <img src="./assets/image/insgram-post/356065191_3457956614520677_5294831407093956875_n.jpg" alt />
+                                            <Image src="/assets/image/insgram-post/356065191_3457956614520677_5294831407093956875_n.jpg" alt='' className='position-relative' fill />
                                         </div>
                                     </a>
                                 </div>
